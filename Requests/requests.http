@@ -1,2 +1,25 @@
 ### TaskManagementSystem HTTP Requests
+@baseUrl = https://localhost:7100
+@testEmail = ahmed@gmail.com
+@testPassword = Moka_11259
+
+### =========================================================
+POST {{baseUrl}}/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "{{testEmail}}",
+  "password": "{{testPassword}}",
+  "confirmPassword": "{{testPassword}}",
+  "fullName": "Ahmed Hossam"
+}
+
+### =========================================================
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "{{testEmail}}",
+  "password": "{{testPassword}}"
+}
 
