@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TaskManagementSystem.Api/TaskManagementSystem.Api.csproj" />
+    <Project Path="src/TaskManagementSystem.BLL/TaskManagementSystem.BLL.csproj" />
+    <Project Path="src/TaskManagementSystem.DAL/TaskManagementSystem.DAL.csproj" />
+  </Folder>
+</Solution>
