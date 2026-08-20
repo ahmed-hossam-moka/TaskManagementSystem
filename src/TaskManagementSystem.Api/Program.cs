@@ -3,12 +3,14 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi;
 using TaskManagementSystem.BLL.Interfaces;
 using TaskManagementSystem.BLL.Services;
-using TaskManagementSystem.DAL.DbContext;
 using TaskManagementSystem.DAL.Entities;
 using Microsoft.OpenApi.Models;
+using TaskManagementSystem.DAL;
+using TaskManagementSystem.DAL.Repositories;
+using TaskManagementSystem.Business.Services;
+using TaskManagementSystem.Business.Interfaces;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -57,6 +59,9 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IJwtService, JwtTokenProvider>();
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+builder.Services.AddScoped<ITaskService, TaskService>();
+
 
 builder.Services.AddControllers();
 
